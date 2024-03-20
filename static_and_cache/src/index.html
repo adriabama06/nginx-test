@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cached?</title>
+</head>
+<body>
+    <style>
+        p {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+    <p>The image below is cached or not?</p>
+    <img src="/static/photo.jpg" style="max-width: 480px;"/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <p>Test using proxy server</p>
+    <img src="/photo" style="max-width: 480px;"/>
+    <p>And this?</p>
+    <img src="/photo.jpg" style="max-width: 480px;"/>
+</body>
+</html>
