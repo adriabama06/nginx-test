@@ -1,0 +1,3 @@
+= The simplest nginx http server
+
+Serve the static files and use reverse proxy for the api, nothing more
