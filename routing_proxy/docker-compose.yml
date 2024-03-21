@@ -1,0 +1,30 @@
+version: '3'
+
+services:
+  nginx:
+    image: nginx:1.24.0
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf
+    depends_on:
+      - static_server
+      - api_server
+
+  static_server:
+    image: node:20
+    command: ["npm", "start"]
+    volumes:
+      - ./static:/app
+    working_dir: /app
+    ports:
+      - "3000:3000"
+
+  api_server:
+    image: node:20
+    command: ["npm", "start"]
+    volumes:
+      - ./api:/app
+    working_dir: /app
+    ports:
+      - "3001:3000"
